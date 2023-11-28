@@ -1,0 +1,29 @@
+{
+    "niveles":[
+      {
+        "cantidad_enemigos": 2,
+        "ancho_enemigos": 70,
+        "alto_elemigos": 30,
+        "tiempo_entre_disparos": 30, 
+        "ancho_disparos": 10,
+        "alto_disparos": 20    
+      },
+      {
+        "cantidad_enemigos": 3,
+        "ancho_enemigos": 84,
+        "alto_elemigos": 36,
+        "tiempo_entre_disparos": 25, 
+        "ancho_disparos": 12,
+        "alto_disparos": 24
+      },
+      {
+        "cantidad_enemigos": 4,
+        "ancho_enemigos": 98,
+        "alto_elemigos": 42,
+        "tiempo_entre_disparos": 20, 
+        "ancho_disparos": 14,
+        "alto_disparos": 28
+      }
+      
+    ]
+  }
