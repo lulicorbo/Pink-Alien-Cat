@@ -16,11 +16,11 @@ class Jugador:
         
         if True in lista_teclas:
             if lista_teclas[pygame.K_RIGHT]:
-                nueva_x = self.rect.x + 5
+                nueva_x = self.rect.x + 15
                 if 0 < nueva_x < 500:
                     self.rect.x += 5
             elif lista_teclas[pygame.K_LEFT]:
-                nueva_x = self.rect.x - 5
+                nueva_x = self.rect.x - 15
                 if 0 < nueva_x < 500:
                     self.rect.x -= 5
 

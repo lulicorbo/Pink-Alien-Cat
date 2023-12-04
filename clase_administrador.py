@@ -6,7 +6,7 @@ class Administrador:
         self.__tiempo = 0
         self.__nivel = 1
         self.__score = 0
-        self.__nombre_jugador = ""
+        self.__sonido = True
 
     @property
     def vidas(self)->object:
@@ -42,3 +42,11 @@ class Administrador:
     @nombre_jugador.setter
     def nombre_jugador(self, nuevo_nombre):
         self.__nombre_jugador = nuevo_nombre
+
+    @property
+    def sonido(self):
+        return self.__sonido
+    @sonido.setter
+    def sonido(self, nuevo_sonido):
+        self.__sonido = nuevo_sonido
+    

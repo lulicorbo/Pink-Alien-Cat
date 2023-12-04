@@ -12,6 +12,7 @@ diccionario_set_up = parse_json("data_set_up.json", "set_up")
 #print(diccionario_set_up)
 
 ELEMENTO_PANTALLA = 0
+COLORES = 2
 
 ANCHO_VENTANA = diccionario_set_up[ELEMENTO_PANTALLA]["ANCHO_VENTANA"]
 LARGO_VENTANA = diccionario_set_up[ELEMENTO_PANTALLA]["ALTO_VENTANA"]

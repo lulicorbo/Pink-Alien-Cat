@@ -3,7 +3,7 @@ import random
 
 #Clase enemigo
 class Enemigo:
-    def __init__(self, ancho, alto, tiempo_entre_disparos = 20) -> None:
+    def __init__(self, ancho, alto, tiempo_entre_disparos, vidas) -> None:
         self.ancho = ancho
         self.alto = alto
         imagen = pygame.image.load("imagenes/imagen_nave_enemiga00.png")
@@ -15,7 +15,7 @@ class Enemigo:
         self.movimiento_y = random.randint(-10, 10)
         self.tiempo_entre_disparos = tiempo_entre_disparos
         self.visible = True
-        self.vida = 1
+        self.vida = vidas
         self.explosion = [pygame.image.load("Imagenes\exp_1.png"),
             pygame.image.load("Imagenes\exp_2.png"),
             pygame.image.load("Imagenes\exp_3.png"),

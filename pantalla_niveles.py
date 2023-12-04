@@ -8,13 +8,15 @@ COLORES = 1
 
 pygame.init()
 
-def mostar_pantalla_entre_niveles(administrador, pantalla:object)->None:
+def mostar_pantalla_entre_niveles(administrador, pantalla):
     """Esta función recibe como parametro una pantalla (objeto) y administrador
     y muestra cual es el proximo nivel a jugar."""
 
+    flag_sonido = administrador.sonido
     sonido_entre_niveles = pygame.mixer.Sound("sonidos\gano.mp3")  
-    sonido_entre_niveles.set_volume(0.4)
-    sonido_entre_niveles.play()
+    sonido_entre_niveles.set_volume(0.2)
+    if administrador.sonido == True:
+        sonido_entre_niveles.play()
 
     flag_lapso = True
     pantalla.fill(data.diccionario_set_up[COLORES]["NEGRO"])

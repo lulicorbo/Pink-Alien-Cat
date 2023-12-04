@@ -1,7 +1,7 @@
 import pygame
 import sys
 import data
-import funciones
+from funciones import validar_nombre
 
 pygame.init()
 
@@ -9,13 +9,17 @@ FUENTE = pygame.font.SysFont(data.FUENTE_1, 30, False, True)
 FUENTE_CHICA = pygame.font.SysFont(data.FUENTE_1, 15, False, True)
 COLORES = 1
 
-def mostar_pantalla_ingresar_nombre(pantalla: object)->str:
-    """Esta función recibe como parametro una pantalla (objeto) y pide el ingreso del nombre
-    del jugador. Si es valido retorna el nombre"""
+def mostar_pantalla_ingresar_nombre(pantalla, administrador):
+    """Esta función recibe como parametro una pantalla (objeto) y al administrador.
+    Pide el ingreso del nombre del jugador. Si es valido retorna el nombre"""
+
+    flag_sonido = administrador.sonido
+    
 
     sonido_nombre = pygame.mixer.Sound("sonidos\gano.mp3")  
-    sonido_nombre.set_volume(0.4)
-    sonido_nombre.play()
+    sonido_nombre.set_volume(0.2)
+    if administrador.sonido:
+        sonido_nombre.play()
 
     imagen = pygame.image.load("imagenes\jugador_01.png")
     texto = "NAME:"
@@ -35,11 +39,11 @@ def mostar_pantalla_ingresar_nombre(pantalla: object)->str:
                 sys.exit()                
             if event.type == pygame.KEYDOWN:
                 #Si se apretar Enter y el nombre es valido, se sale del while
-                if event.key == pygame.K_RETURN and funciones.validar_nombre(nombre): 
+                if event.key == pygame.K_RETURN and validar_nombre(nombre): 
                     print(nombre)
                     flag_ingreso = False
                     return nombre
-                elif event.key == pygame.K_RETURN and funciones.validar_nombre(nombre) == False:
+                elif event.key == pygame.K_RETURN and validar_nombre(nombre) == False:
                     nombre = "" #Si no es valido se borra
                 elif event.key == pygame.K_BACKSPACE:
                     nombre = nombre[:-1] #Borrar caracter 

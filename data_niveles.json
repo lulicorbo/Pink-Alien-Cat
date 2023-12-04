@@ -6,23 +6,32 @@
         "alto_elemigos": 30,
         "tiempo_entre_disparos": 30, 
         "ancho_disparos": 10,
-        "alto_disparos": 20    
+        "alto_disparos": 20,
+        "cantidad_recompensas": 2,
+        "cantidad_meteoritos": 3,
+        "vidas_enemigos": 2  
       },
       {
-        "cantidad_enemigos": 3,
-        "ancho_enemigos": 84,
-        "alto_elemigos": 36,
+        "cantidad_enemigos": 2,
+        "ancho_enemigos": 141,
+        "alto_elemigos": 60,
         "tiempo_entre_disparos": 25, 
-        "ancho_disparos": 12,
-        "alto_disparos": 24
+        "ancho_disparos": 16,
+        "alto_disparos": 32,
+        "cantidad_recompensas": 2,
+        "cantidad_meteoritos": 4,
+        "vidas_enemigos": 4
       },
       {
-        "cantidad_enemigos": 4,
-        "ancho_enemigos": 98,
-        "alto_elemigos": 42,
+        "cantidad_enemigos": 1,
+        "ancho_enemigos": 200,
+        "alto_elemigos": 72,
         "tiempo_entre_disparos": 20, 
-        "ancho_disparos": 14,
-        "alto_disparos": 28
+        "ancho_disparos": 19,
+        "alto_disparos": 38,
+        "cantidad_recompensas": 3,
+        "cantidad_meteoritos": 7,
+        "vidas_enemigos": 12 
       }
       
     ]
